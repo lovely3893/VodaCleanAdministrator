@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.reload:
-                web.loadUrl("https://vodacleanserver3893.000webhostapp.com/display.php");
+                web.loadUrl("https://vodacleanserver3893.000webhostapp.com");
                 break;
             case R.id.about:
                 AlertDialog.Builder dialog = new AlertDialog.Builder(this);
