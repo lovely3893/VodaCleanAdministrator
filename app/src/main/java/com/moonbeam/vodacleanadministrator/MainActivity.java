@@ -1,8 +1,10 @@
 package com.moonbeam.vodacleanadministrator;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
 import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -48,6 +50,20 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.reload:
                 web.loadUrl("https://vodacleanserver3893.000webhostapp.com/display.php");
+                break;
+            case R.id.about:
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                dialog.setTitle("Created by-");
+                dialog.setMessage("\tLovely Singh\n\t11211636");
+                dialog.setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface arg0, int arg1) {
+                                Toast.makeText(MainActivity.this,"Thanks",Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
                 break;
             case R.id.exit:
                 finish();

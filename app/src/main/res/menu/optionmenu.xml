@@ -4,6 +4,8 @@
 
     <item android:title="reload"
         android:id="@+id/reload"/>
+    <item android:title="About Us"
+        android:id="@+id/about"/>
     <item android:id="@+id/exit"
         android:title="exit"/>
 </menu>
